@@ -1,0 +1,454 @@
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.logo-text:hover {
+    transform: scale(1.02);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+}
+/* New styles for the complex search bar */
+.search-bar-main-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-section {
+    padding: 5px 15px;
+    position: relative;
+}
+
+.search-section label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.search-section input, .search-section select {
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    color: #555;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.search-section select {
+    cursor: pointer;
+}
+
+.divider {
+    width: 1px;
+    background-color: #eee;
+    height: 30px;
+    margin: 0 3px;
+}
+
+.search-button {
+    background-color: #ff3366;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(255, 51, 102, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.search-button i {
+    color: white;
+    font-size: 1em;
+}
+
+.search-button:hover {
+    background-color: #e6004c;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px); /* Increased from 5px to 15px to move it further down */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    min-width: 250px;
+    z-index: 1000;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    border: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 12px 20px; /* Increased padding for better spacing */
+    color: #333;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95em;
+    white-space: normal; /* Allow text to wrap for descriptions */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.dropdown-divider {
+    height: 1px;
+    margin: 8px 0;
+    overflow: hidden;
+    background-color: #e0e0e0; /* Light grey divider */
+    border: 0;
+}
+
+/* Specific styling for the 'Become a host' section */
+.dropdown-item.d-flex {
+    align-items: flex-start; /* Align items to the top for multiline text */
+}
+
+.dropdown-item strong {
+    font-size: 1em;
+}
+
+.dropdown-item small {
+    font-size: 0.85em;
+    line-height: 1.3; /* Adjust line height for readability */
+}
+
+.welcome-text {
+    font-size: 0.8em; /* Adjusted size for Welcome text, slightly smaller */
+    color: #666; /* Medium grey color for better match with image */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-left: 5px; /* Increased gap from the logo */
+}
+
+.welcome-text-right {
+    font-size: 1em; /* Adjust font size as needed */
+    color: #333; /* Adjust color as needed */
+    margin-left: 10px; /* Increased gap from the logo */
+    white-space: nowrap;
+}
+
+.logo-and-text-gap {
+    margin-right: 20px; /* Increased gap from the Welcome user_name text */
+}
+
+.profile-icon {
+    font-size: 0.7em; /* Smaller icon size to fit tight circle */
+    background-color: #1877f2; /* Exact blue from image */
+    border-radius: 50%;
+    width: 18px; /* Adjusted width for the circular background */
+    height: 18px; /* Adjusted height for the circular background */
+    color: white; /* Color of the user silhouette */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px; /* No gap from caret */
+    transition: background-color 0.2s ease;
+}
+
+.profile-icon:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.dropdown-toggle {
+    /* Temporarily adding border and background for debugging */
+    /* border: 2px solid blue;
+    background-color: red; */
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    opacity: 0.8;
+}
+
+.white-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.box-content {
+    padding: 15px;
+}
+
+/* Card Container Styles */
+.card-container {
+    background: radial-gradient(circle at top right, #005a4d 0%, #1a1a1a 80%);
+    border-radius: 15px;
+    padding: 25px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    width: 85%;
+    margin: 20px 0 20px 20px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.welcome-card-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    padding: 20px 0 20px 25px;
+    margin-left: 0;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2e3034;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #007bff;
+}
+
+.form-group input::placeholder {
+    color: #777;
+    opacity: 0.8;
+}
+
+.form-group input[type="text"][readonly],
+.form-group input[type="tel"][readonly],
+.form-group input[type="email"][readonly] {
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #fff !important;
+    min-width: 0 !important;
+}
+
+.form-text {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #a0a0a0;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.edit-icon:hover {
+    color: #fff;
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-buttons .btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-buttons .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    box-shadow: 0 0 0px rgba(0, 123, 255, 0);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.edit-buttons .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+.edit-buttons .btn-primary:focus,
+.edit-buttons .btn-primary:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.edit-buttons .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+}
+
+.edit-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Revert container-fluid to its original state (no flexbox on it) */
+.container-fluid {
+    padding: 0 15px; /* Default Bootstrap padding for fluid containers */
+}
+
+/* Avatar Selection Styles */
+.avatar-option {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.avatar-option:hover {
+    transform: scale(1.05);
+    border-color: #0d6efd;
+}
+
+.avatar-option.selected {
+    border-color: #0d6efd;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+}
+
+.avatar-option img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}

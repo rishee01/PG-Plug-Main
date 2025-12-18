@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PGPlug - Student Accommodation</title>
+  <link rel="stylesheet" href="interface.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <header class="text-center py-2 bg-white border-bottom border-top">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+                <div class="col-3 text-start">
+                    <h2 class="text-primary mb-0 fw-bold logo-text">PGPlug</h2>
+                </div>
+                <div class="col-6">
+                    <div class="search-bar-main-container">
+                        <div class="search-section">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Where are you going?">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="academic-year">Academic Year</label>
+                            <select id="academic-year">
+                                <option>2024-2025</option>
+                                <option>2025-2026</option>
+                                <option>2026-2027</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="months">Months</label>
+                            <select id="months">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="guests">Guests</label>
+                            <select id="guests">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4+ Guests</option>
+                            </select>
+                        </div>
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3 text-end d-flex align-items-center justify-content-end pe-5">
+                    <div class="logo-and-text-gap" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                        <i class="fas fa-user-circle fa-3x text-primary"></i>
+                    </div>
+                    <div class="position-relative">
+                        <span class="welcome-text-right" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Welcome </span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item d-flex align-items-center" href="details.html">
+                                <div class="flex-grow-1">
+                                    <strong class="d-block">My Profile</strong>
+                                    <small class="text-muted d-block">"Customer Service is our Priority"</small>
+                                </div>
+                                <i class="fas fa-home fa-2x ms-3 text-secondary"></i>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="my_booking.html">My Bookings</a>
+                            <div style="height: 16px;"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Help Centre</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <div style="height: 16px;"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="layout-wrapper">
+      <div class="main-content">
+        <div class="red-card">
+          <div style="display: flex; align-items: flex-start; gap: 32px; height: 100%;">
+            <div class="skeleton-thumbnail skeleton"></div>
+            <div style="width: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+              <div class="skeleton-hotel-title skeleton" style="margin-bottom: 16px; width: 100%;"></div>
+              <div class="skeleton-hotel-location skeleton" style="margin-bottom: 16px; width: 60%;"></div>
+              <div class="skeleton-hotel-rating skeleton" style="margin-bottom: 16px; width: 40%; height: 20px;"></div>
+              <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+              </div>
+              <div style="display: flex; align-items: flex-end; width: 100%; justify-content: space-between; margin-top: 64px;">
+                <div class='skeleton-hotel-price skeleton' style='width: 140px; height: 48px;'></div>
+                <div style="display: flex; align-items: flex-end;">
+                  <button class="btn btn-outline-dark">View Details</button>
+                  <button class="btn btn-success" style="margin-left: 18px;">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="red-card">
+          <div style="display: flex; align-items: flex-start; gap: 32px; height: 100%;">
+            <div class="skeleton-thumbnail skeleton"></div>
+            <div style="width: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+              <div class="skeleton-hotel-title skeleton" style="margin-bottom: 16px; width: 100%;"></div>
+              <div class="skeleton-hotel-location skeleton" style="margin-bottom: 16px; width: 60%;"></div>
+              <div class="skeleton-hotel-rating skeleton" style="margin-bottom: 16px; width: 40%; height: 20px;"></div>
+              <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+              </div>
+              <div style="display: flex; align-items: flex-end; width: 100%; justify-content: space-between; margin-top: 64px;">
+                <div class='skeleton-hotel-price skeleton' style='width: 140px; height: 48px;'></div>
+                <div style="display: flex; align-items: flex-end;">
+                  <button class="btn btn-outline-dark">View Details</button>
+                  <button class="btn btn-success" style="margin-left: 18px;">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="red-card">
+          <div style="display: flex; align-items: flex-start; gap: 32px; height: 100%;">
+            <div class="skeleton-thumbnail skeleton"></div>
+            <div style="width: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+              <div class="skeleton-hotel-title skeleton" style="margin-bottom: 16px; width: 100%;"></div>
+              <div class="skeleton-hotel-location skeleton" style="margin-bottom: 16px; width: 60%;"></div>
+              <div class="skeleton-hotel-rating skeleton" style="margin-bottom: 16px; width: 40%; height: 20px;"></div>
+              <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+              </div>
+              <div style="display: flex; align-items: flex-end; width: 100%; justify-content: space-between; margin-top: 64px;">
+                <div class='skeleton-hotel-price skeleton' style='width: 140px; height: 48px;'></div>
+                <div style="display: flex; align-items: flex-end;">
+                  <button class="btn btn-outline-dark">View Details</button>
+                  <button class="btn btn-success" style="margin-left: 18px;">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="red-card">
+          <div style="display: flex; align-items: flex-start; gap: 32px; height: 100%;">
+            <div class="skeleton-thumbnail skeleton"></div>
+            <div style="width: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start;">
+              <div class="skeleton-hotel-title skeleton" style="margin-bottom: 16px; width: 100%;"></div>
+              <div class="skeleton-hotel-location skeleton" style="margin-bottom: 16px; width: 60%;"></div>
+              <div class="skeleton-hotel-rating skeleton" style="margin-bottom: 16px; width: 40%; height: 20px;"></div>
+              <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+                <div class="skeleton-hotel-amenity skeleton" style="width: 54px; height: 18px;"></div>
+              </div>
+              <div style="display: flex; align-items: flex-end; width: 100%; justify-content: space-between; margin-top: 64px;">
+                <div class='skeleton-hotel-price skeleton' style='width: 140px; height: 48px;'></div>
+                <div style="display: flex; align-items: flex-end;">
+                  <button class="btn btn-outline-dark">View Details</button>
+                  <button class="btn btn-success" style="margin-left: 18px;">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wave">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="h"></div>
+        <div class="v"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="interface.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Details Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="details.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <header class="text-center py-2 bg-white border-bottom border-top">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+                <div class="col-3 text-start">
+                    <h2 class="text-primary mb-0 fw-bold logo-text">PGPlug</h2>
+                </div>
+                <div class="col-6">
+                    <div class="search-bar-main-container">
+                        <div class="search-section">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Where are you going?">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="academic-year">Academic Year</label>
+                            <select id="academic-year">
+                                <option>2024-2025</option>
+                                <option>2025-2026</option>
+                                <option>2026-2027</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="months">Months</label>
+                            <select id="months">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="guests">Guests</label>
+                            <select id="guests">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4+ Guests</option>
+                            </select>
+                        </div>
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3 text-end d-flex align-items-center justify-content-end pe-5">
+                    <div class="logo-and-text-gap" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
+                        <i class="fas fa-user-circle fa-3x text-primary"></i>
+                    </div>
+                    <div class="position-relative">
+                        <span class="welcome-text-right">Welcome user_name</span>
+                        <span id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle"></span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="flex-grow-1">
+                                    <strong class="d-block">My Profile</strong>
+                                    <small class="text-muted">"Customer Service is our Priority"</small>
+                                </div>
+                                <i class="fas fa-home fa-2x ms-3 text-secondary"></i>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">My Bookings</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Help Centre</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9">
+                <div class="card-container" style="margin-top: 70px;">
+                    <p class="welcome-card-text">Hello User_name,</p>
+                    <div class="edit-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="----------" readonly style="display: none;">
+                        <span id="fullNameDisplay" class="form-text">----------</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="----------" readonly style="display: none;">
+                        <span id="phoneNumberDisplay" class="form-text">----------</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="----------" readonly style="display: none;">
+                        <span id="emailDisplay" class="form-text">----------</span>
+                    </div>
+                    <div class="edit-buttons" style="display: none;">
+                        <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button class="btn btn-primary" id="saveBtn">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="profile-section" style="margin-top: 150px; text-align: left; margin-left: 20px;">
+                    <div class="profile-logo" style="width: 200px; height: 200px; border-radius: 50%; background-color: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user fa-5x text-primary"></i>
+                    </div>
+                    <button class="btn btn-primary mt-3" style="width: 200px;" data-bs-toggle="modal" data-bs-target="#photoModal">
+                        <i class="fas fa-camera me-2"></i>Change Photo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Selection Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">Change Profile Photo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-outline-primary btn-lg" type="button">
+                            <i class="fas fa-images me-2"></i>Select from Gallery
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#avatarModal">
+                            <i class="fas fa-user-circle me-2"></i>Select Avatar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avatar Selection Modal -->
+    <div class="modal fade" id="avatarModal" tabindex="-1" aria-labelledby="avatarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="avatarModalLabel">Select an Avatar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-cols-4 g-3">
+                        <!-- Professional Avatars -->
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="1">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 1">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="2">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 2">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="3">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 3">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="4">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 4">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="5">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 5">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="6">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 6">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="7">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 7">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="avatar-option" data-avatar="8">
+                                <img src="https://via.placeholder.com/128" class="img-fluid rounded-circle" alt="Professional Avatar 8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="reg.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="image-box"></div>
+
+    <div class="form-container">
+      <!-- LOGIN FORM -->
+      <div id="login-form">
+        <h2 class="form-heading">Login</h2>
+        <form>
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <div class="password-toggle">
+            <input type="checkbox" id="showLoginPassword">
+            <label for="showLoginPassword">Show Password</label>
+          </div>
+          <div class="remember-me">
+            <input type="checkbox" id="rememberMe">
+            <label for="rememberMe">   Remember Me</label>
+          </div>
+          <button type="submit">Login</button>
+          <div class="forgot-password">
+            <a href="#" onclick="showForgotPassword(event)">Forgot Password?</a>
+          </div>
+          <div class="google-login">
+            <button type="button" class="google-btn" onclick="loginWithGoogle()">
+              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" style="width:20px; vertical-align:middle; margin-right:8px;">
+              Continue with Google
+            </button>
+          </div>
+          <div class="or-divider"><span>or</span></div>
+        </form>
+        <div class="toggle">
+          Don't have an account? <a href="#" onclick="showSignup(event)">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- FORGOT PASSWORD FORM -->
+      <div id="forgot-password-form" class="hidden">
+        <h2 class="form-heading">Reset Password</h2>
+        <form id="forgotPasswordStep1">
+          <input type="email" placeholder="Enter your email" required />
+          <input type="tel" id="resetPhoneNumber" placeholder="Enter your phone number" required />
+          <button type="button" onclick="sendResetOTP()">Send OTP</button>
+          <div id="resetOtpMsg1" class="message"></div>
+        </form>
+
+        <form id="resetOtpVerification" class="hidden">
+          <input type="text" id="resetOtpInput" placeholder="Enter OTP" required />
+          <input type="password" id="newPassword" placeholder="New Password" required />
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+          <button type="submit">Reset Password</button>
+          <div id="resetOtpMsg2" class="message"></div>
+        </form>
+
+        <div class="toggle">
+          Remember your password? <a href="#" onclick="showLogin(event)">Login</a>
+        </div>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div id="signup-form" class="hidden">
+        <div class="google-login">
+          <button type="button" class="google-btn" onclick="loginWithGoogle()">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" style="width:20px; vertical-align:middle; margin-right:8px;">
+            Continue with Google
+          </button>
+        </div>
+        <div class="or-divider"><span>or</span></div>
+        <form id="signupStep1">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required class="password-input" id="signupPassword"/>
+          <div class="password-strength">
+            <span id="password-strength-text"></span>
+          </div>
+          <div class="password-toggle">
+            <input type="checkbox" id="showSignupPassword">
+            <label for="showSignupPassword">Show Password</label>
+          </div>
+
+          <div class="phone-input-container">
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required />
+            <button type="button" class="otp-btn" onclick="sendOTP()">Verify</button>
+          </div>
+          <div id="otpMsg1" class="message"></div>
+        </form>
+
+        <form id="otpVerification" class="hidden">
+          <input type="text" id="otpInput" placeholder="Enter OTP" required />
+          <button type="submit">Verify OTP</button>
+          <div id="otpMsg2" class="message"></div>
+        </form>
+
+        <div class="toggle">
+          Already have an account? <a href="#" onclick="showLogin(event)">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="reg.js"></script>
+
+</body>
+
+</html>

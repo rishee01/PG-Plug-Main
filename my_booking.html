@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - PGplug</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="my_booking.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+    <header class="text-center py-2 bg-white border-bottom border-top">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+                <div class="col-3 text-start">
+                    <h2 class="text-primary mb-0 fw-bold logo-text">PGPlug</h2>
+                </div>
+                <div class="col-6">
+                    <div class="search-bar-main-container">
+                        <div class="search-section">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Where are you going?">
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="academic-year">Academic Year</label>
+                            <select id="academic-year">
+                                <option>2024-2025</option>
+                                <option>2025-2026</option>
+                                <option>2026-2027</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="months">Months</label>
+                            <select id="months">
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="search-section">
+                            <label for="guests">Guests</label>
+                            <select id="guests">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4+ Guests</option>
+                            </select>
+                        </div>
+                        <button class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-3 text-end d-flex align-items-center justify-content-end pe-5">
+                    <div class="logo-and-text-gap" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-circle text-primary" style="font-size: 44px;"></i>
+                    </div>
+                    <div class="position-relative">
+                        <span class="welcome-text-right dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Welcome user_name ▼</span>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="flex-grow-1">
+                                    <strong class="d-block">My Profile</strong>
+                                    <small class="text-muted">"Customer Service is our Priority"</small>
+                                </div>
+                                <i class="fas fa-home fa-2x ms-3 text-secondary"></i>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">My Bookings</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Help Centre</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- White Box -->
+    <div class="transparent-box">
+        <div class="container">
+            <h3 class="mb-4 text-center">My Bookings</h3>
+            <ul class="nav nav-tabs justify-content-center mb-4" id="booking-nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">At home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Completed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Upcoming</a>
+                </li>
+            </ul>
+            <div class="booking-cards-container">
+                <!-- Booking Card 1 - At home -->
+                <div class="booking-card" data-tab="at-home">
+                    <span class="status-badge status-confirmed">Confirmed</span>
+                    <div class="booking-card-header">
+                        <div class="skeleton-title"></div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="address-line"><strong>Address:</strong> <div class="skeleton-address"></div></div>
+                        <div class="info-line"><strong>Booking ID:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>From:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>Rent:</strong> <div class="skeleton-info"></div></div>
+                    </div>
+                    <div class="booking-card-footer">
+                        <button class="btn btn-outline-primary"><i class="fas fa-phone-alt"></i> Contact PG</button>
+                        <button class="btn btn-outline-primary"><i class="fas fa-calendar-plus"></i> Extend Stay</button>
+                        <button class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cancel</button>
+                    </div>
+                </div>
+
+                <!-- Booking Card 2 - Completed -->
+                <div class="booking-card" data-tab="completed" style="display: none;">
+                    <span class="status-badge status-completed">Completed</span>
+                    <div class="booking-card-header">
+                        <div class="skeleton-title"></div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="address-line"><strong>Address:</strong> <div class="skeleton-address"></div></div>
+                        <div class="info-line"><strong>Booking ID:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>From:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>Rent:</strong> <div class="skeleton-info"></div></div>
+                    </div>
+                    <div class="booking-card-footer">
+                        <button class="btn btn-outline-primary"><i class="fas fa-phone-alt"></i> Contact PG</button>
+                        <button class="btn btn-outline-primary"><i class="fas fa-calendar-plus"></i> Extend Stay</button>
+                    </div>
+                </div>
+
+                <!-- Booking Card 2b - Completed -->
+                <div class="booking-card" data-tab="completed" style="display: none;">
+                    <span class="status-badge status-completed">Completed</span>
+                    <div class="booking-card-header">
+                        <div class="skeleton-title"></div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="address-line"><strong>Address:</strong> <div class="skeleton-address"></div></div>
+                        <div class="info-line"><strong>Booking ID:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>From:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>Rent:</strong> <div class="skeleton-info"></div></div>
+                    </div>
+                    <div class="booking-card-footer">
+                        <button class="btn btn-outline-primary"><i class="fas fa-phone-alt"></i> Contact PG</button>
+                        <button class="btn btn-outline-primary"><i class="fas fa-calendar-plus"></i> Extend Stay</button>
+                    </div>
+                </div>
+
+                <!-- Booking Card 3 - Upcoming -->
+                <div class="booking-card" data-tab="upcoming" style="display: none;">
+                    <span class="status-badge status-upcoming">Upcoming</span>
+                    <div class="booking-card-header">
+                        <div class="skeleton-title"></div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="address-line"><strong>Address:</strong> <div class="skeleton-address"></div></div>
+                        <div class="info-line"><strong>Booking ID:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>From:</strong> <div class="skeleton-info"></div></div>
+                        <div class="info-line"><strong>Rent:</strong> <div class="skeleton-info"></div></div>
+                    </div>
+                    <div class="booking-card-footer">
+                        <button class="btn btn-outline-primary"><i class="fas fa-phone-alt"></i> Contact PG</button>
+                        <button class="btn btn-outline-primary"><i class="fas fa-calendar-plus"></i> Extend Stay</button>
+                        <button class="btn btn-outline-danger"><i class="fas fa-times-circle"></i> Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="my_booking.js"></script>
+</body>
+</html>

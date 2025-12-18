@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PGplug - Premium Hostel & PG Booking</title>
+    <link rel="stylesheet" href="intro.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="max-w-7xl mx-auto px-6 py-4 grid grid-cols-3 items-center">
+            <h1 class="logo col-span-1">PGPlug</h1>
+            <nav class="hidden md:flex items-center space-x-8 col-span-1 justify-self-center">
+                <a href="#" class="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition font-medium">
+                    <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-8a4 4 0 014-4h10a4 4 0 014 4v8M7 21v-4a4 4 0 014-4h2a4 4 0 014 4v4" />
+                    </svg>
+                    <span>Hostels</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition font-medium">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" />
+                    </svg>
+                    <span>PG</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition font-medium">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <span>Experiences</span>
+                </a>
+            </nav>
+            <div class="flex items-center gap-1 ml-auto col-span-1 justify-self-end">
+                <a href="details.html" class="logo-and-text-gap" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-user-circle fa-3x text-blue-600"></i>
+                </a>
+                <div class="position-relative">
+                    <span class="welcome-text-right" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Welcome </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item d-flex align-items-center" href="details.html">
+                            <div class="flex-grow-1">
+                                <strong class="d-block">My Profile</strong>
+                                <small class="text-muted d-block">"Customer Service is our Priority"</small>
+                            </div>
+                            <i class="fas fa-home fa-2x ms-3 text-secondary"></i>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="my_booking.html">My Bookings</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>Help Centre</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">About Us</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+
+    <div class="glow-container">
+        <div class="ball"></div>
+        <div class="ball" style="--delay:-12s;--size:0.35;--speed:25s;"></div>
+        <div class="ball" style="--delay:-10s;--size:0.3;--speed:15s;"></div>
+        <div class="ball" style="--delay:-18s;--size:0.25;--speed:30s;"></div>
+    </div>
+
+    <main class="flex flex-col items-center justify-center flex-grow text-center px-4 pt-24 pb-12">
+        <div class="animate-fade-in">
+            <h1 class="hero-title">Connecting you to comfortable Stays</h1>
+            <p class="hero-subtitle">Discover premium hostels and PGs at unbeatable prices</p>
+        </div>
+
+        <div class="features-grid animate-fade-in animate-delay-300">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Verified Properties</h3>
+                <p class="text-gray-300">All our hostels and PGs are personally verified for quality and safety
+                    standards.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm-7 4c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2v8H5v-8z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Best Prices</h3>
+                <p class="text-gray-300">Get the most competitive rates with our price match guarantee and exclusive
+                    deals.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Instant Booking</h3>
+                <p class="text-gray-300">Book your stay instantly with our streamlined process and immediate
+                    confirmation.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="messageModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <p id="modalMessage"></p>
+            <button id="modalCloseBtn">OK</button>
+        </div>
+    </div>
+
+    <footer class="w-full bg-gray-900 text-gray-400 py-6 text-center text-sm z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            &copy; 2025 PGplug. All rights reserved.
+        </div>
+    </footer>
+    <script src="intro.js"></script>
+</body>
+
+</html>

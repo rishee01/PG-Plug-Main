@@ -1,0 +1,265 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  background: rgba(30, 30, 48, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: 90%;
+}
+
+.image-box {
+  flex: 1;
+  background: url('hostel1.jpg') center center / cover no-repeat;
+  min-height: 400px;
+}
+
+.form-container {
+  flex: 1;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.4s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: #1c1c2b;
+  color: white;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffff;
+  transform: scale(1.02);
+}
+
+button {
+  padding: 10px;
+  background-color: #00ffff;
+  color: #1c1c2b;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #00cccc;
+  transform: scale(1.05);
+}
+
+.toggle {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.9em;
+}
+
+.toggle a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toggle a:hover {
+  color: #00cccc;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.success {
+  color: #00ff88;
+}
+
+.error {
+  color: #ff5e5e;
+}
+
+.password-strength {
+  margin-bottom: 4px;
+  min-height: 18px;
+}
+
+.password-strength-bar {
+  display: none !important;
+}
+
+#password-strength-text {
+  position: static;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 0.95em;
+  color: #fff;
+  padding-right: 2px;
+}
+
+.password-toggle {
+  margin-top: 5px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.password-toggle label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.remember-me {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.forgot-password {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.forgot-password a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #00cccc;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .image-box {
+    height: 250px;
+  }
+}
+
+.google-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 1px 2px rgba(60,64,67,.08);
+}
+
+.google-btn:hover {
+  box-shadow: 0 2px 4px rgba(60,64,67,.15);
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0 8px 0;
+}
+
+.or-divider span {
+  padding: 0 12px;
+  color: #888;
+  font-size: 14px;
+}
+
+.or-divider:before,
+.or-divider:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.phone-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.phone-input-container input {
+  flex: 1;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.otp-btn {
+  margin: 0;
+  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  padding: 10px 15px;
+}
